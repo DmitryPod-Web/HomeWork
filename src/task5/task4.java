@@ -9,15 +9,15 @@ public class task4 {
 
         System.out.println("Введите 10 чисел для массива, цикл выдаст их в обратном порядке.");
 
-        int [] reverseArray = new int[10];
+        int [] numbers = new int[10];
 
-        for (int i = 0; i < reverseArray.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
 
-            reverseArray[i] = scanner.nextInt();
+            numbers[i] = scanner.nextInt();
         }
 
         for (int i = 10  - 1; i >= 0; i--) {
-            System.out.println(reverseArray[i]);
+            System.out.println(numbers[i]);
         }
 
     }

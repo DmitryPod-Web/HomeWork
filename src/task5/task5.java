@@ -23,15 +23,16 @@ public class task5 {
         for (int i = 0; i < 10; i++) {
 
             firstHalfArray[i] = mainArray[i];
-
+            secondHalfArray[i] = mainArray[i + 10];
+            System.out.print(secondHalfArray[i] + " ");
         }
 
-        for (int j = 0; j < 10; j++) {
-
-            secondHalfArray[j] = mainArray[j + 10];
-
-            System.out.print(secondHalfArray[j] + " ");
-        }
+//        for (int j = 0; j < 10; j++) {
+//
+//            secondHalfArray[j] = mainArray[j + 10];
+//
+//            System.out.print(secondHalfArray[j] + " ");
+//        }
 
 
     }

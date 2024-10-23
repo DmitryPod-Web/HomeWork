@@ -10,18 +10,20 @@ public class task2 {
 
         System.out.println("Введите 10 чисел для нахождения максимального: ");
 
-        int [] findingTheMaximumNumber = new int[10];
+        int [] findMaxNumber = new int[10];
 
-        for (int i = 0; i < findingTheMaximumNumber.length; i++) {
+        for (int i = 0; i < findMaxNumber.length; i++) {
 
-            findingTheMaximumNumber[i] = scanner.nextInt();
+            findMaxNumber[i] = scanner.nextInt();
         }
 
 
-        int theMaximumNumberSecondTask = Arrays.stream(findingTheMaximumNumber).max().getAsInt();
+        int maxNumberTask = Arrays.stream(findMaxNumber)
+                .max()
+                .getAsInt();
 
 
-        System.out.println(theMaximumNumberSecondTask);
+        System.out.println(maxNumberTask);
 
     }
 }
