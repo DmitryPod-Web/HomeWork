@@ -21,7 +21,7 @@ public class Task2 {
         String shortest = strings[0];
         String longest = strings[0];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < 5; i++) {
             if (strings[i].length() < shortest.length()) {
                 shortest = strings[i];
             }
@@ -31,8 +31,11 @@ public class Task2 {
         }
 
 
-            System.out.println("Самая короткая строка: " + shortest.length());
-            System.out.println("Самая длинная строка: " + longest.length());
+            String formatLonger = String.format("Самая длинная строка: \"%s\" ее длинна: %d", longest, longest.length());
+            String formatSortest = String.format("Самая короткая строка: \"%s\" ее длинна: %d", shortest, shortest.length());
+
+            System.out.println(formatLonger);
+            System.out.println(formatSortest);
 
     }
 }

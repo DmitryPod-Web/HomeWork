@@ -17,22 +17,22 @@ public class Task4 {
 
         System.out.println("введите 10 строк и цикл найдет длину каждой строки.");
 
-        String [] strings = new String [10];
+        String [] numberOfString = new String [10];
 
         int [] numberArray = new int [10];
 
-        for (int i = 0; i < strings.length; i++) {
+        for (int i = 0; i < numberOfString.length; i++) {
 
-            strings[i] = scanner.nextLine();
-            numberArray[i] = strings[i].length();
+            numberOfString[i] = scanner.nextLine();
+            numberArray[i] = numberOfString[i].length();
         }
 
 
 
         for (int i = 0; i < numberArray.length; i++) {
             int string = i + 1;
-            int symbol = numberArray[i];
-            String result = String.format("Строка номер %d имеет: %d символов", string, symbol);
+            int stringLength = numberArray[i];
+            String result = String.format("Строка номер %d имеет: %d символов", string, stringLength);
             System.out.println(result);
 
         }

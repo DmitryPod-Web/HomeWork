@@ -20,17 +20,24 @@ public class Task1 {
 
         Scanner scanner = new Scanner(System.in);
 
-        String input = scanner.nextLine();
+        while (true) {
+            String input = scanner.nextLine();
 
-        System.out.println(input.toUpperCase());
+            if (input.isEmpty()) {
+                break;
+            }
 
 
-        if (input.length() % 2 == 0){
-            System.out.println(input + input);
-        } else {
-            System.out.println(input + input + input);
+            System.out.println(input.toUpperCase());
+
+
+            if (input.length() % 2 == 0) {
+                System.out.println(input + input);
+            } else {
+                System.out.println(input + input + input);
+            }
+
         }
-
 
 
     }

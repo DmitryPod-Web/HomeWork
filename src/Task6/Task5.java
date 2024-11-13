@@ -20,12 +20,27 @@ public class Task5 {
 
 
         for (int i = 0; i < strings.length; i++) {
-            for (int j = i + 1; j < strings.length; j++) {
-                if (strings[i] != null && strings[i].equals(strings[j])){
-                    strings[j] = null;
+            if (strings[i] != null) {
+                String currentString = strings[i];
+                int count = 0;
+
+
+                for (int j = 0; j < strings.length; j++) {
+                    if (currentString.equals(strings[j])) {
+                        count++;
+                    }
+                }
+                if (count > 1) {
+                    for (int k = 0; k < strings.length; k++) {
+                        if (currentString.equals(strings[k])) {
+                            strings[k] = null;
+                        }
+                    }
                 }
             }
         }
+
+
 
         for (int i = 0; i < strings.length; i++) {
             System.out.println(strings[i]);
@@ -34,3 +49,12 @@ public class Task5 {
 
     }
 }
+
+
+//        for (int i = 0; i < strings.length; i++) {
+//            for (int j = i + 1; j < strings.length; j++) {
+//                if (strings[i] != null && strings[i].equals(strings[j])){
+//                    strings[j] = null;
+//                }
+//            }
+//        }
