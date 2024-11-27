@@ -17,30 +17,41 @@ public class task4 {
         int number = scanner.nextInt();
         int exponent = scanner.nextInt();
 
-        int numberRaised1 = fiestMetod (number, exponent);
+  //    int numberRaised1 = firstMethod (number, exponent);
 
-        int numberRaised2 = sekondMetod (number, exponent);
+ //    int numberRaised2 = seсondMetod (number, exponent);
 
-        int sum = numberRaised1 + numberRaised2;
+        int sum = getSum(number, exponent);
 
         System.out.println(sum);
     }
 
-    public static int fiestMetod (int a, int b){
-        int result = 1;
-        for (int i = 0; i < b; i++) {
-            result *= a;
-        }
-        return result;
+
+    public static int power(int a, int b){
+        return (int) Math.pow(a, b);
     }
 
-    public static int sekondMetod (int a, int b){
-        int result = 1;
-        for (int i = 0; i < b; i++) {
-            result *= a;
-        }
-        return result;
+    public static int getSum(int number, int exponent) {
+    return power(number, exponent) + power(number, exponent);
     }
+
+
+
+//    public static int firstMethod (int a, int b){
+//        int result = 1;
+//        for (int i = 0; i < b; i++) {
+//            result *= a;
+//        }
+//        return result;
+//    }
+//
+//    public static int seсondMetod(int a, int b){
+//        int result = 1;
+//        for (int i = 0; i < b; i++) {
+//            result *= a;
+//        }
+//        return result;
+//    }
 
 
 

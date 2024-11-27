@@ -16,14 +16,12 @@ public class task5 {
 
 
     // считывает число и возвращает его
-    public static int getInt() {
-        Scanner scanner = new Scanner(System.in);
+    public static int getInt(Scanner scanner) {
         return scanner.nextInt();
     }
 
     // считывает математический оператор
-    public static char getOperation() {
-        Scanner scanner = new Scanner(System.in);
+    public static char getOperation(Scanner scanner) {
         return scanner.next().charAt(0);
     }
 
@@ -54,21 +52,23 @@ public class task5 {
     }
 // подсчет и вывод
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите первое число");
-        int num1 = getInt();
+        int num1 = getInt(scanner);
 
         System.out.println("Введите оператор (+, -, /, *)");
-        char operation = getOperation();
+        char operation = getOperation(scanner);
 
         System.out.println("Введите второе число");
-        int num2 = getInt();
+        int num2 = getInt(scanner);
 
 
         int result = calc(num1, num2, operation);
         System.out.println("Ответ:");
         System.out.println(result);
 
+        scanner.close();
 
     }
 
