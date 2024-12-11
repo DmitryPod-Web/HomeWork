@@ -5,23 +5,25 @@ public class Human {
     //fields
 
     private String name;
-    private Boolean sex;
+    private boolean isMale;
     private int age;
-    private String father;
-    private String mather;
+    private Human father;
+    private Human mather;
 
     //constructor
 
 
-    public Human(String name, Boolean sex, int age) {
+    public Human(String name, boolean isMale, int age) {
         this.name = name;
-        this.sex = sex;
+        this.isMale = isMale;
         this.age = age;
+        this.father = null;
+        this.mather = null;
     }
 
-    public Human(String name, Boolean sex, int age, String father, String mather) {
+    public Human(String name, boolean isMale, int age, Human father, Human mather) {
         this.name = name;
-        this.sex = sex;
+        this.isMale = isMale;
         this.age = age;
         this.father = father;
         this.mather = mather;
@@ -29,11 +31,16 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Имя: " + name  +
-                ", пол: " + sex +
-                ", возраст: " + age +
-                ", отец: " + father +
-                ", мать: " + mather;
+        String result = "Имя: " + name  +
+                ", пол: " + getIsMale() +
+                ", возраст: " + age;
+        if (father != null) {
+            result += ", отец: " + father.getName();
+        }
+        if (mather != null) {
+            result += ", мать: " + mather.getName();
+        }
+        return result;
     }
 
 
@@ -48,12 +55,12 @@ public class Human {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex ? "мужской" : "женсикй";
+    public String getIsMale() {
+        return isMale ? "мужской" : "женский";
     }
 
-    public void setSex(Boolean sex) {
-        this.sex = sex;
+    public void setIsMale(Boolean isMale) {
+        this.isMale = isMale;
     }
 
     public int getAge() {
@@ -64,20 +71,19 @@ public class Human {
         this.age = age;
     }
 
-    public String getFather() {
+    public Human getFather() {
         return father;
     }
 
-    public void setFather(String father) {
+    public void setFather(Human father) {
         this.father = father;
     }
 
-    public String getMather() {
+    public Human getMather() {
         return mather;
     }
 
-    public void setMather(String mather) {
+    public void setMather(Human mather) {
         this.mather = mather;
     }
-
 }
