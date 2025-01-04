@@ -1,12 +1,12 @@
 package Task_9.Task_2_1;
 
-public class Goods {
+public class Product {
 
-    String name;
-    int price;
-    int rating;
+    private String name;
+    private int price;
+    private int rating;
 
-    public Goods(String name, int price, int rating) {
+    public Product(String name, int price, int rating) {
         this.name = name;
         this.price = price;
         this.rating = rating;

@@ -2,12 +2,12 @@ package Task_9.Task_2_1;
 
 public class Category {
 
-    String nameOfCategory;
-    Goods[] goods;
+    private String nameOfCategory;
+    private Product[] products;
 
-    public Category(String nameOfCategory, Goods[] goods) {
+    public Category(String nameOfCategory, Product[] products) {
         this.nameOfCategory = nameOfCategory;
-        this.goods = goods;
+        this.products = products;
     }
 
     public String getNameOfCategory() {
@@ -18,11 +18,11 @@ public class Category {
         this.nameOfCategory = nameOfCategory;
     }
 
-    public Goods[] getGoods() {
-        return goods;
+    public Product[] getGoods() {
+        return products;
     }
 
-    public void setGoods(Goods[] goods) {
-        this.goods = goods;
+    public void setGoods(Product[] products) {
+        this.products = products;
     }
 }

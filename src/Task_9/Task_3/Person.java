@@ -4,8 +4,8 @@ import Task_8.Human;
 
 public class Person {
 
-    String fullName;
-    int age;
+    private String fullName;
+    private int age;
 
 
     public Person(String fullName, int age) {

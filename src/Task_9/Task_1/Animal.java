@@ -2,8 +2,8 @@ package Task_9.Task_1;
 
 public class Animal {
 
-    String food;
-    String location;
+    protected String food;
+    protected String location;
 
 
     public void makeNoise() {
