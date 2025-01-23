@@ -29,38 +29,38 @@ public class Task_4 {
             arrayList.add(scanner.nextInt());
         }
 
-        ArrayList<Integer> b = new ArrayList<>(); //для делящихся на 3
-        ArrayList<Integer> c = new ArrayList<>(); //для делящихся на 2
-        ArrayList<Integer> d = new ArrayList<>(); //для остального
+        ArrayList<Integer> Divided3 = new ArrayList<>(); //для делящихся на 3
+        ArrayList<Integer> Divided2 = new ArrayList<>(); //для делящихся на 2
+        ArrayList<Integer> NoDivided = new ArrayList<>(); //для остального
 
 
         for (int i = 0; i < arrayList.size(); i++) {
 
             if (arrayList.get(i) % 3 == 0 && arrayList.get(i) % 2 == 0) {
-                b.add(arrayList.get(i));
-                c.add(arrayList.get(i));
+                Divided3.add(arrayList.get(i));
+                Divided2.add(arrayList.get(i));
             } else if (arrayList.get(i) % 3 == 0) {
-                b.add(arrayList.get(i));
+                Divided3.add(arrayList.get(i));
             } else if (arrayList.get(i) % 2 == 0) {
-                c.add(arrayList.get(i));
+                Divided2.add(arrayList.get(i));
             } else {
-                d.add(arrayList.get(i));
+                NoDivided.add(arrayList.get(i));
             }
         }
 
-       printList(b, c, d);
+       printList(Divided3, Divided2, NoDivided);
 
     }
 
-    public static void printList(ArrayList<Integer> b, ArrayList<Integer> c, ArrayList<Integer> d) {
+    public static void printList(ArrayList<Integer> Divided3, ArrayList<Integer> Divided2, ArrayList<Integer> NoDivided) {
 
-        for (Integer num : b) {
+        for (Integer num : Divided3) {
             System.out.println(num);
         }
-        for (Integer num : c) {
+        for (Integer num : Divided2) {
             System.out.println(num);
         }
-        for (Integer num : d) {
+        for (Integer num : NoDivided) {
             System.out.println(num);
         }
     }
