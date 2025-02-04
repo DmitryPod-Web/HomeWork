@@ -33,13 +33,9 @@ public class Task_3 {
         return words.stream()
                 .flatMap(word -> {
 
-            if (word.contains("р") && word.contains("л")) {
-                return Stream.of(word);
-
-            } else if (word.contains("л")) {
+            if (word.contains("л") && !word.contains("р")) {
                 return Stream.of(word, word);
-
-            } else if (word.contains("р")) {
+            } else if (word.contains("р") && !word.contains("л")) {
                 return Stream.empty();
             } else {
                 return Stream.of(word);
